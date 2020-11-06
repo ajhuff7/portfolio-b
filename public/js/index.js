@@ -2,39 +2,29 @@ $(document).ready(function () {
 
     // variables for modals
     var bioModal = $("#bio");
-    var contactModal = $("#contact");
+    var contactModal = $("#contactMe");
 
     // hide modals
     bioModal.attr("style", "display: none");
     contactModal.attr("style", "display: none");
 
 
-    $("#portfolio").on("click", function (event) {
-        event.preventDefault();
-        $.get("/portfolio", {
-        })
-            .then(function () {
-                window.location.replace("/portfolio");
-                // If there's an error, log the error
-            });
-    });
 
+    // open modals 
     $("#about").on("click", function (event) {
         event.preventDefault();
+        contactModal.attr("style", "display: none");
         bioModal.attr("style", "display: block");
-        $("#aboutMe").text(
-            "Ambitious Front End Developer with an interest in UX/UI design who hopes to bring a creative problem solving approach to desiging products and experiences. Innovative self-starter with experience building and updating responsive websites. Proficient in HTML, CSS, jQuery, JavaScript and Node.js; plus modern libraries and frameworks. Creative thinker who believes adaptability is key. Passionate about collaborating closely with a team to support projects during all phases of delivery.");
-    });
+        console.log("success!")
+   });
 
     $("#contact").on("click", function (event) {
         event.preventDefault();
+        bioModal.attr("style", "display: none");
         contactModal.attr("style", "display: block");
+        console.log("success!")
     });
 
-    $("#submit").on("click", function (event) {
-        event.preventDefault();
-
-    });
 
     // close modals
     $("#closeBio").on("click", function (event) {
@@ -42,14 +32,7 @@ $(document).ready(function () {
     });
 
     $("#closeContact").on("click", function (event) {
-        profile.attr("style", "display: none");
-    });
-
-    // close modals on screen click
-    $(".body").on("click", function () {
-        bioModal.attr("style", "display: none");
-        contactModal.attr("style", "display: block");
-
+        contactModal.attr("style", "display: none");
     });
 
 
