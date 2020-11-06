@@ -90,8 +90,9 @@ body {
       position: absolute;
   } */
 
-  .link:hover, 
-  .link:focus {
-    cursor: pointer;
-    opacity: .5;
-  }
+
+.link:hover, 
+.link:focus {
+  cursor: pointer;
+  opacity: .5;
+}
