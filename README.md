@@ -39,7 +39,7 @@ A responsive portfolio site with a modals for text data, portfolio items, and co
 
 ## Deployed Link
 
-* [See Live Site](https://ajhuff7.github.io/portfolio-b/)
+* [See Live Site](https://stark-mesa-37630.herokuapp.com/)
 
 ---
 
